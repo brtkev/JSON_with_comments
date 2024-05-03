@@ -1,0 +1,33 @@
+@top JSON { value }
+
+value { True | False | Null | Number | String | Object | Array }
+
+String[isolate] { string }
+Object { "{" list<Property>? "}" }
+Array  { "[" list<value>? "]" }
+
+Property { PropertyName ":" value }
+PropertyName[isolate] { string }
+
+
+@tokens {
+  True  { "true" }
+  False { "false" }
+  Null  { "null" }
+
+  Number { '-'? int  }
+  int  { $[0-9]+ }
+
+  string { '"' !["]* '"' }
+
+  whitespace { $[ \n\r\t] }
+  comment { '//' ![\n]* '\n' }
+  "{" "}" "[" "]"
+}
+
+@skip { whitespace | comment }
+list<item> { item ("," item)* }
+
+@external propSource highlighting from "./highlight"
+
+@detectDelim

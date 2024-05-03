@@ -1,0 +1,30 @@
+{
+    "car":{ // this is a comment
+        "color": "blue",
+        "fuelCapacity": 40,
+        "properties": {
+            "doors": 4,
+            "wheels": 4,
+            "details": {
+                "carID": 123456789,
+                "companyName": "abc",
+                "asegurado": false // mejor tener un seguro y no necesitarlo,
+            }// que necesitarlo y no tenerlo
+        }
+    },
+    "dog":{//abcopadks askdmlña ms asopdkasdasmd a sdlañsda opsmasd´1231920 1 da15 3a50d * 
+        "name": "firulais",
+        "race": "callejero"
+    },
+    // mayonesa
+    "listOfFruits": [
+        "manzana",
+        "naranja",
+        "cambur",
+        "guayaba", // guabaya
+        "melon",
+        "aguacate"
+    ],
+    "numberOfPeopleInTheWorld": 8000000000, // it's over 9000
+    "isThisAJSONString": true
+}
